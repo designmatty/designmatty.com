@@ -1,19 +1,27 @@
 .header {
-	padding: 50px 0;
-	h1 {
+	padding: 50px 0 100px;
+	h1.tagline {
 		text-align: center;
 		font-weight: 700;
 		font-size: rem-calc(50);
 		text-transform: uppercase;
+		margin-bottom: 40px;
 		span {
 			font-size: rem-calc(40);
 			position: relative;
 			top: -3px;
 			color: $primary;
 		}
+		@media (max-width: 750px) {
+			font-size: rem-calc(35);
+			span {
+				font-size: rem-calc(25);
+			}
+		}
 	}
 	.picon-down-arrow {
 		text-align: center;
 		display: block;
+		color: $primary;
 	}
 }

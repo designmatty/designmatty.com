@@ -15,11 +15,11 @@ $visibility: hidden;
 }
 .fadeInDown {
 	@include fadeInDown(2s, $delay, $function, $fill, $visibility);
-	-webkit-animation-iteration-count: 10;
-	-moz-animation-iteration-count: 10;
-	-ms-animation-iteration-count: 10;
-	-o-animation-iteration-count: 10;
-	animation-iteration-count: 10;
+	-webkit-animation-iteration-count: infinite;
+	-moz-animation-iteration-count: infinite;
+	-ms-animation-iteration-count: infinite;
+	-o-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
 }
 .fadeInUp {
 	@include fadeInUp($duration, $delay, $function, $fill, $visibility);

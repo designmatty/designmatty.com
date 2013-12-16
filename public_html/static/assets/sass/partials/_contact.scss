@@ -1,0 +1,52 @@
+.contact {
+	text-align: center;
+	padding: 150px 0;
+	background: $off-white;
+	background: rgba($off-white, .9);
+	position: relative;
+	z-index: 100;
+	a {
+		font-size: rem-calc(50);
+		color: $grey;
+		padding: 20px 20px;
+		position: relative;
+		span {
+			color: $primary;
+		}
+		&:hover {
+			text-decoration: none;
+		}
+	}
+	a:hover {
+    span[class*="line-"] {
+      opacity: 1;
+    }
+    .line-bottom {
+      width: 0%;
+    }
+    .line-left {
+      height: 100%;
+      top: auto;
+      bottom: 0;
+    }
+  }
+  span[class*="line-"] {
+    display: block;
+    background: $primary;
+    position: absolute;
+    opacity: 0;
+    @include transition-c(.75s all ease-in-out);
+  }
+  .line-bottom {
+    width: 100%;
+    left: 0;
+    height: 2px;
+    bottom: 0;
+  }
+  .line-left {
+    left: 0;
+    bottom: 0;
+    height: 0%;
+    width: 2px;
+  }
+}
