@@ -1,0 +1,29 @@
+$duration: 1s;
+$delay: .2s;
+$function: ease;
+$fill: both;
+$visibility: hidden;
+
+@import "animation/properties";
+@import "animation/fadeIn";
+@import "animation/fadeInDown";
+@import "animation/fadeInUp";
+@import "animation/fadeOutDown";
+
+.fadeIn {
+	@include fadeIn($duration, $delay, $function, $fill, $visibility);
+}
+.fadeInDown {
+	@include fadeInDown(2s, $delay, $function, $fill, $visibility);
+	-webkit-animation-iteration-count: 10;
+	-moz-animation-iteration-count: 10;
+	-ms-animation-iteration-count: 10;
+	-o-animation-iteration-count: 10;
+	animation-iteration-count: 10;
+}
+.fadeInUp {
+	@include fadeInUp($duration, $delay, $function, $fill, $visibility);
+}
+.fadeOutDown {
+	@include fadeOutDown($duration, $delay, $function, $fill, $visibility);
+}

@@ -1,0 +1,62 @@
+@import url(http://fonts.googleapis.com/css?family=Playfair+Display:400,700,900|Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700);
+
+@import 
+  "foundation/functions.scss",
+  "partials/mixins-includes.scss",
+  "partials/animate.scss",
+  "partials/nav.scss",
+  "partials/header.scss",
+  "partials/about.scss";
+
+
+body {
+  padding: 1.5%;
+  background: $grey;
+  @include open-sans;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $grey;
+  @include playfair;
+}
+
+.padded {
+  padding: 50px 0;
+}
+
+[class*="picon"] {
+  font-size: 20px;
+}
+
+span[class*="-border"] {
+  position: fixed;
+  padding: .75%;
+  background: $grey;
+  z-index: 100;
+}
+.top-border {
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.bottom-border {
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.left-border {
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+.right-border {
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.container {
+  background: $off-white;
+  border: 1px solid lighten($grey, 5%);
+  padding: 350px 0px 20px;
+}
