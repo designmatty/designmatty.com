@@ -1,10 +1,39 @@
-
 .navigation {
   position: fixed; 
   top: 200px;
   left: 0;
   right: 0;
   z-index: 10;
+  &.alt-nav {
+    z-index: 110;
+    background: $off-white;
+    padding-top: 1.5%;
+    @include positioning(0, 1.5%, initial, 1.5%);
+  }
+}
+
+.alt-nav {
+  .logo {
+    max-width: 75px;
+    position: relative;
+    float: left;
+    margin: 18px 30px;
+  }
+  .collapser {
+    display: block;
+    position: relative;
+    float: right;
+    margin: 18px 30px;
+  }
+  .main-nav {
+    display: none;
+    ul {
+      margin: 20px auto 0;
+    }
+    &.appear {
+      display: block;
+    }
+  }
 }
 
 .logo {
@@ -31,13 +60,13 @@
         position: relative;
         display: block;
         @include transition;
-        &:hover {
+        &:hover, &.active {
           color: $primary;
           text-decoration: none;
         }
       }
     }
-    a:hover {
+    a:hover, .a.active {
       span[class*="line-"] {
         opacity: 1;
       }
@@ -69,5 +98,35 @@
       height: 0%;
       width: 1px;
     }
+  }
+  @media (max-width:$small) {
+    clear: both;
+    padding-bottom: 10px;
+  }
+}
+
+.collapser {
+  display: none;
+  width: 40px;
+  padding: 5px 0;
+  background: $primary;
+  right: 0;
+  z-index: 999;
+  cursor: pointer;
+  @include transition;
+  span {
+    display: block;
+    width: 11px;
+    height: 4px;
+    background: $white;
+    margin: 3px auto;
+    @include border-radius(2px);
+    &:nth-child(even) {
+      width: 17px;
+    }
+  }
+  &:hover, &:focus {
+    background: $grey;
+    outline: none;
   }
 }

@@ -5,6 +5,9 @@ $primary: #44d2cd;
 $secondary: #7b61ca;
 $purple: #1b0d28;
 
+$small: 768px;
+$medium: 992px;
+$large: 1200px;
 
 //Mixins and Includes
 @mixin box-sizing {
@@ -57,6 +60,13 @@ $purple: #1b0d28;
   -ms-transform: $transform;
   -o-transform: $transform;
   transform: $transform;
+}
+
+@mixin positioning($top, $right, $bottom, $left) {
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
 }
 
 @mixin open-sans{
