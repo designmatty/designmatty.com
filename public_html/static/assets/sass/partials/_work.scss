@@ -3,3 +3,23 @@
 	position: relative;
 	z-index: 100;
 }
+
+.work-preview {
+	display: block;
+	width: 100%;
+	margin: 0 0 20px;
+	img {
+		width: 100%;
+		height: auto;
+		-webkit-filter: grayscale(0%);
+		cursor: pointer;
+		max-heigt: 219px;
+	}
+	&:hover {
+		img {
+			&:hover {
+				-webkit-filter: grayscale(100%);
+			}
+		}
+	}
+}
