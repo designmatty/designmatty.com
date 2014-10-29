@@ -133,14 +133,14 @@
   &.active span {
     width: 15px;
     &:first-child {
-      @include transform(rotate(45deg) translate(6px, 5px));
+      @include transform(rotate(45deg) translate3d(5px, 5px, 0px));
     }
     &:nth-child(even) {
       @include opacity(0);
       background: $primary; // opacity fail backup
     }
     &:last-child {
-      @include transform(rotate(135deg) translate(-4px, 5px)); 
+      @include transform(rotate(135deg) translate3d(-5px, 5px, 0px)); 
     }
   }
 }
