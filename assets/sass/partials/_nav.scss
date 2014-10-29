@@ -121,6 +121,7 @@
     background: $white;
     margin: 3px auto;
     @include border-radius(2px);
+    @include transition;
     &:nth-child(even) {
       width: 17px;
     }
@@ -128,5 +129,18 @@
   &:hover, &:focus {
     background: $grey;
     outline: none;
+  }
+  &.active span {
+    width: 15px;
+    &:first-child {
+      @include transform(rotate(45deg) translate(6px, 5px));
+    }
+    &:nth-child(even) {
+      @include opacity(0);
+      background: $primary; // opacity fail backup
+    }
+    &:last-child {
+      @include transform(rotate(135deg) translate(-4px, 5px)); 
+    }
   }
 }

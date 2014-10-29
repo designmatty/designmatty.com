@@ -6,12 +6,14 @@ $(function() {
 		    }
 		    else{
 			    	$('.navigation').removeClass('alt-nav fadeInUp');
-			    	$('.main-nav').removeClass('appear fadeIn');
+            $('.main-nav').removeClass('appear fadeIn');
+			    	$('.collapser').removeClass('active');
 		    }
 		});
 
 		$('.collapser').on('click', function(e) {
       $('.main-nav').toggleClass("appear fadeIn");
+      $(this).toggleClass("active");
     });
 
     var headerFade = $('.tagline'),
