@@ -1,0 +1,19 @@
+h1, h2, h3, h4, h5, h6 {
+  color: $grey;
+  @include playfair;
+}
+
+p {
+  color: $grey;
+  line-height: 1.9;
+  font-size: rem-calc(14);
+  font-weight: 400;
+}
+
+a {
+  color: $primary;
+  &:hover {
+    color: $primary;
+    text-decoration: underline;
+  }
+}

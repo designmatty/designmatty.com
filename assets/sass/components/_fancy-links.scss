@@ -1,0 +1,32 @@
+a:hover {
+  span[class*="line-"] {
+    opacity: 1;
+  }
+  .line-bottom {
+    width: 0%;
+  }
+  .line-left {
+    height: 100%;
+    top: auto;
+    bottom: 0;
+  }
+}
+span[class*="line-"] {
+  display: block;
+  background: $primary;
+  position: absolute;
+  opacity: 0;
+  @include transition-c(.75s all ease-in-out);
+}
+.line-bottom {
+  width: 100%;
+  left: 0;
+  height: 2px;
+  bottom: 0;
+}
+.line-left {
+  left: 0;
+  bottom: 0;
+  height: 0%;
+  width: 2px;
+}

@@ -1,0 +1,29 @@
+.button {
+  color: $primary;
+  font-size: rem-calc(12);
+  font-weight: 300;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  background: none;
+  border: 2px solid $primary;
+  @include transition;
+  &:hover {
+    text-decoration: none;
+    color: $grey;
+    background: none;
+    border-color: $grey;
+  }
+}
+
+.button.disable {
+  opacity: .5;
+  cursor: default;
+  &:hover {
+    color: $primary;
+    border-color: $primary; 
+  }
+}
+.center-button {
+  display: block;
+  margin: 0 auto 1.25rem;
+}
