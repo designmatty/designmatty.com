@@ -4,13 +4,17 @@
 	z-index: 100;
 }
 
+.work-container {
+	position: relative;
+	overflow: hidden;
+}
+
 .work-preview {
 	display: block;
 	width: 100%;
 	margin: 0 0 50px;
 	position: relative;
 	* {
-		@include transition;
 		-webkit-backface-visibility: hidden;
 	}
 	h5 {
@@ -26,29 +30,34 @@
 		width: 100%;
 		height: auto;
 		position: relative;
+		@include transition-c(transform 0.4s);
 	}
-	&:hover {
-		.work-caption {
-			@include opacity(1);
-		}
-		img {
+}
 
-		}
+.work-preview:hover {
+	.work-caption {
+		bottom: 0;
+		@include opacity(1);
+		@include transition-c(bottom 0.4s, opacity 0.1s);
+	}
+
+	img {
+		@include transform(translateY(-50px));
 	}
 }
 
 .work-caption {
 	z-index: 100;
 	padding: 10px 20px;
-	background: $grey;
-	background: rgba($grey, .8);
+	background: $white;
 	position: absolute;
 	@include box-sizing;
 	@include opacity(0);
-	@include positioning(inherit, 0, 0, 0);
+	@include positioning(inherit, 0, -71px, 0);
+	@include transition-c(bottom 0.4s, opacity 0.1s 0.3s);
 	p {
 		display: block;
-		color: $white;
+		color: $grey;
 		margin: 3px 0;
 		font-size: rem-calc(12);
     font-weight: 400;
@@ -72,8 +81,8 @@
 		background-color: $primary;
 		color: $white;
 		&:hover {
-			color: $white;
-			border-color: $white;
+			color: $primary;
+			border-color: $primary;
 			background: transparent;
 			&.disable {
 				color: $primary;

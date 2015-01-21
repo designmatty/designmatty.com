@@ -35,7 +35,7 @@
   transition: all .2s ease-in-out;
 }
 
-@mixin transition-c($transition) {
+@mixin transition-c($transition...) {
   -webkit-transition: $transition;
   -moz-transition: $transition;
   -ms-transition: $transition;
