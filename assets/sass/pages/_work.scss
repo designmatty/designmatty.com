@@ -43,6 +43,10 @@
 
 	img {
 		@include transform(translateY(-50px));
+		
+		@media(max-width: $small) {
+			@include transform(none);
+		}
 	}
 }
 
@@ -98,6 +102,7 @@
 		background: none;
 		position: relative;
 		padding: 0;
+		bottom: 0;
 		@include opacity(1);
 		p {
 			display: block;
